@@ -1,4 +1,3 @@
-Mình đã tìm ra các lỗi chính tả/không nhất quán tên class. Đây là bản đã sửa:
 
 ```mermaid
 classDiagram
