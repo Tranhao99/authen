@@ -1,3 +1,5 @@
+Mình đã tìm ra các lỗi chính tả/không nhất quán tên class. Đây là bản đã sửa:
+
 ```mermaid
 classDiagram
   direction TB
@@ -26,12 +28,12 @@ classDiagram
   }
   
   class DaoAuthenticationProvider {
-    -UserDetailsService userDetailService
+    -UserDetailsService userDetailsService
     -PasswordEncoder passwordEncoder
     +authenticate(Authentication) Authentication
   }
   
-  class UserDetailService {
+  class UserDetailsService {
     <<interface>>
     +loadUserByUsername(String) UserDetails
   }
@@ -89,7 +91,7 @@ classDiagram
   }
   
   class GlobalExceptionHandler {
-    +handleBadCredentials(BasCredentialsException) ResponseEntity
+    +handleBadCredentials(BadCredentialsException) ResponseEntity
   }
   
   AuthController --> AuthService : 1. authenticate
@@ -107,7 +109,7 @@ classDiagram
   DaoAuthenticationProvider --> PasswordEncoder : matches
   
   UserDetailsService <|.. CustomUserDetailsService
-  CustomUserDetailService --> UserRepository : findByEmail
+  CustomUserDetailsService --> UserRepository : findByEmail
   UserRepository ..> User
   
   PasswordEncoder <|.. BCryptPasswordEncoder
