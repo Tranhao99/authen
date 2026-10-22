@@ -82,7 +82,7 @@ classDiagram
   
   class UsernamePasswordAuthenticationToken
   
-  class LoginRquest {
+  class LoginRequest {
     <<record>>
     +String email
     +String password
@@ -106,7 +106,7 @@ classDiagram
   DaoAuthenticationProvider --> UserDetailsService
   DaoAuthenticationProvider --> PasswordEncoder : matches
   
-  UserDetailService <|.. CustomUserDetailService
+  UserDetailsService <|.. CustomUserDetailsService
   CustomUserDetailService --> UserRepository : findByEmail
   UserRepository ..> User
   
