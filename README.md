@@ -1,3 +1,5 @@
+<img width="4128" height="3096" alt="20261102_162439" src="https://github.com/user-attachments/assets/b08e2068-8c45-4914-9013-cd683c9077b8" />
+
 Mình đưa 2 sơ đồ: **class diagram** (quan hệ giữa các thành phần) và **sequence diagram** (luồng login và lưu session vào DB).
 
 ## 1. Class diagram
